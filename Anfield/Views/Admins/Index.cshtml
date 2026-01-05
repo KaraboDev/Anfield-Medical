@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Anfield.Models.Admin>
+
+@{
+    ViewData["Title"] = "Welcome to Admin Dashboard";
+}
+
+<center>
+<h1>Welcome to Admin Dashboard</h1>
+</center>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="~/css/AdminDashboard.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"   />
+</head>
+<body>
+    <center>
+        <a class="btn" asp-area="Identity" asp-page="/Account/Register"><i class="fa-solid fa-address-card"></i> Register New Patient</a>
+        <a class="btn" asp-area="Identity" asp-page="/Account/Register"><i class="fa-solid fa-stethoscope"></i> Register New Doctor/Nurse</a>
+        <a class="btn" asp-area="" asp-controller="BookAppointments" asp-action="Create"><i class="fa-regular fa-calendar-check"></i> Book Patient Appointment</a>
+        <button class="btn"><i class="fa-regular fa-clipboard"></i> Registration Record</button>
+        <a class="btn" asp-area="" asp-controller="UserRoles" asp-action="Index"><i class="fa-solid fa-users"></i> Create System User Roles</a>
+        <a class="btn" asp-area="" asp-controller="BookAppointments" asp-action="Index"><i class="fa-solid fa-eye"></i> View Appointments</a>
+    </center>
+</body>
+</html>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>*@
+@*@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AdminId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AdminId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AdminId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@

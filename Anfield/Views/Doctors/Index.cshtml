@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Anfield.Models.Doctor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<center>
+    <h1>Welcome to Doctor/Nurse Dashboard</h1>
+</center>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="~/css/DoctorDashboard.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"   />
+</head>
+<body>
+    <center>
+
+        <a class="btn" asp-area="" asp-controller="ChronicMedications" asp-action="Create" style="color:black"><i class="fa-solid fa-tablets"></i> Chronic Medication(Prescription)</a>
+        <a class="btn" asp-area="" asp-controller="ChronicMedications" asp-action="Index" style="color:black"><i class="fa-solid fa-binoculars"></i> View Prescriptions</a>
+        <a class="btn" asp-area="" asp-controller="ExpectingPatients" asp-action="Create" style="color:black"><i class="fa-solid fa-person-pregnant"></i> Pre-Natal Care</a>
+        <a class="btn" asp-area="" asp-controller="ExpectingPatients" asp-action="Index" style="color:black"><i class="fa-solid fa-binoculars"></i> View Pregnancies</a>
+        <a class="btn" asp-area="" asp-controller="Vaccines" asp-action="Index" style="color:black"><i class="fa-regular fa-user"></i> View Available Vaccines</a>
+        <a class="btn" asp-area="" asp-controller="Vaccines" asp-action="Create" style="color:black"><i class="fa-solid fa-syringe"></i>Add Vaccine</a>
+        <a class="btn" asp-area="" asp-controller="Pathologies" asp-action="Create" style="color:black"><i class="fa-solid fa-syringe"></i>Add Pathology Report</a>
+        <a class="btn" asp-area="" asp-controller="Pathologies" asp-action="Index" style="color:black"><i class="fa-regular fa-user"></i> View Lab Reports</a>
+    </center>
+</body>
+</html>
+
+@*<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DoctorId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DoctorId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DoctorId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
